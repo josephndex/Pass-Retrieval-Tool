@@ -89,6 +89,14 @@ if __name__ == "__main__":
         results = []
 
     if results:
-        display_results(results)
+        ssid_input = input("Enter Wi-Fi name (SSID) to view its password, or press Enter to show all: ").strip()
+        if ssid_input:
+            filtered = [wifi for wifi in results if wifi["SSID"].lower() == ssid_input.lower()]
+            if filtered:
+                display_results(filtered)
+            else:
+                print(f"No saved Wi-Fi network found with SSID: {ssid_input}")
+        else:
+            display_results(results)
     else:
         print("No saved Wi-Fi networks found or insufficient permissions.\nRun with elevated privileges if needed.")
