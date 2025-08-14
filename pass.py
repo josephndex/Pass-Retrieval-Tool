@@ -99,4 +99,4 @@ if __name__ == "__main__":
         else:
             display_results(results)
     else:
-        print("No saved Wi-Fi networks found or insufficient permissions.\nRun with elevated privileges if needed.")
+        print("No saved Wi-Fi networks found or insufficient permissions. \nRun with elevated privileges if needed.")
